@@ -1,8 +1,8 @@
 ﻿node_modules/
 vendor/
 .env
+.env.local
 .env.*
 !.env.example
-.DS_Store
-.next/
 dist/
+.next/
