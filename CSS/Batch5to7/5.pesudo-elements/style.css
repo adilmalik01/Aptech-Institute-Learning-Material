@@ -1,0 +1,39 @@
+/* input{
+    background-color: aquamarine;
+} */
+
+
+/* input:hover{
+    background-color: lightblue;
+} */
+
+/* input:active{
+    background-color: rgb(111, 216, 66);
+} */
+
+
+
+/* input:focus{
+    background-color: rgb(111, 216, 66);
+} */
+
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(111, 216, 66);
+    border-radius: 50%;
+    margin: 50px;
+    transition: all 0.5s ease;
+    border: 1px solid transparent;
+}
+
+.circle:hover {
+    background-color: lightblue;
+    /* transform: translateX(-30%); */
+    /* transform: translateY(-10%); */
+    /* transform: rotate(360deg); */
+    transform: scale(1.1);
+    border: 3px solid rgb(226, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

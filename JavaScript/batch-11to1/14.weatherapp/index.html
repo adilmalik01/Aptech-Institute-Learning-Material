@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <style>
+        body {
+            background: #f0f2f5;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .search-box {
+            margin-top: 2rem;
+        }
+
+        .userInput {
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            margin-left: 0.5rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            background: #667eea;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .weather-card {
+            width: 100%;
+            max-width: 380px;
+            margin: 2rem auto;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .city {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .date-time {
+            margin-top: 0.3rem;
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .temperature-section {
+            text-align: center;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .current-temp {
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .feels-like {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .conditions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .condition-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .condition-value {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .condition-label {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="search-box">
+        <input class="userInput" type="search" placeholder="Enter city">
+        <button class="btn">Search</button>
+    </div>
+
+    <div class="weather-card">
+
+        <div class="card-header">
+            <h2 class="city"></h2>
+            <p class="date-time">Monday, 22 Jan • 10:45 AM</p>
+        </div>
+
+        <div class="temperature-section">
+            <div class="current-temp result">0°C</div>
+            <div class="feels-like">Feels like 16°C</div>
+        </div>
+
+        <div class="conditions-grid">
+            <div class="condition-box">
+                <div class="condition-value">55%</div>
+                <div class="condition-label">Humidity</div>
+            </div>
+
+            <div class="condition-box">
+                <div class="condition-value">1022</div>
+                <div class="condition-label">Pressure</div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

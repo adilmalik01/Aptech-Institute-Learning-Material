@@ -1,0 +1,6 @@
+.card-div{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 30px;
+  gap: 20px;
+}

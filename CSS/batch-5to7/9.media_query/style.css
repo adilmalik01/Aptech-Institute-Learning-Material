@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.parent{
+    background-color: cadetblue;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+
+.child{
+    width: 70%;
+    height: 100vh;
+    background-color: chocolate;
+}
+
+
+.child img{
+    width: 80%;
+    height: 80%;
+}
+
+
+
+
+
+
+
+@media (max-width:530px) {
+    .child img{
+        width: 100%;
+    }
+}
+
+@media (max-width:420px) {
+    .child{
+        width: 100%;
+    }
+}
+
+/* @media (max-width:750px) {
+    
+
+    .parent{
+        background-color: red;
+    }
+
+}
+
+
+@media (max-width:350px) {
+    
+
+    .parent{
+        background-color: rgb(234, 255, 0);
+    }
+
+} */

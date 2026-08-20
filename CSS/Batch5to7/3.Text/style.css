@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
+
+#heading1 {
+    text-transform: lowercase;
+    font-family: "Mystery Quest", system-ui;
+    text-decoration: underline;
+}
+
+.anchor-tag {
+    color: black;
+    text-decoration: none;
+}
+
+#heading2 {
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+
+}
+
+
+.para {
+    background-color: rgba(5, 106, 157, 0.3);
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: "Story Script", sans-serif;
+    word-spacing: 5px;
+}

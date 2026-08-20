@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+    <header class="bg-gray-900">
+        <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt=""
+                        class="h-8 w-auto" />
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" command="show-modal" commandfor="mobile-menu"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <el-popover-group class="hidden lg:flex lg:gap-x-12">
+                <div class="relative">
+                    <button popovertarget="desktop-menu-product"
+                        class="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
+                        Product
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                            class="size-5 flex-none text-gray-500">
+                            <path
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <el-popover id="desktop-menu-product" anchor="bottom" popover
+                        class="w-screen max-w-md overflow-hidden rounded-3xl bg-gray-800 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
+                        <div class="p-4">
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5">
+                                <div
+                                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        data-slot="icon" aria-hidden="true"
+                                        class="size-6 text-gray-400 group-hover:text-white">
+                                        <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#" class="block font-semibold text-white">
+                                        Analytics
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-400">Get a better understanding of your traffic</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5">
+                                <div
+                                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        data-slot="icon" aria-hidden="true"
+                                        class="size-6 text-gray-400 group-hover:text-white">
+                                        <path
+                                            d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#" class="block font-semibold text-white">
+                                        Engagement
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-400">Speak directly to your customers</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5">
+                                <div
+                                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        data-slot="icon" aria-hidden="true"
+                                        class="size-6 text-gray-400 group-hover:text-white">
+                                        <path
+                                            d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#" class="block font-semibold text-white">
+                                        Security
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-400">Your customers’ data will be safe and secure</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5">
+                                <div
+                                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        data-slot="icon" aria-hidden="true"
+                                        class="size-6 text-gray-400 group-hover:text-white">
+                                        <path
+                                            d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#" class="block font-semibold text-white">
+                                        Integrations
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-400">Connect with third-party tools</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5">
+                                <div
+                                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        data-slot="icon" aria-hidden="true"
+                                        class="size-6 text-gray-400 group-hover:text-white">
+                                        <path
+                                            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#" class="block font-semibold text-white">
+                                        Automations
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-400">Build strategic funnels that will convert</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 divide-x divide-white/10 bg-gray-700/50">
+                            <a href="#"
+                                class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-white hover:bg-gray-700/50">
+                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                    class="size-5 flex-none text-gray-500">
+                                    <path
+                                        d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z"
+                                        clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                                Watch demo
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-white hover:bg-gray-700/50">
+                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                    class="size-5 flex-none text-gray-500">
+                                    <path
+                                        d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z"
+                                        clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                                Contact sales
+                            </a>
+                        </div>
+                    </el-popover>
+                </div>
+
+                <a href="#" class="text-sm/6 font-semibold text-white">Features</a>
+                <a href="#" class="text-sm/6 font-semibold text-white">Marketplace</a>
+                <a href="#" class="text-sm/6 font-semibold text-white">Company</a>
+            </el-popover-group>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
+        <el-dialog>
+            <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+                <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                    <el-dialog-panel
+                        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="-m-1.5 p-1.5">
+                                <span class="sr-only">Your Company</span>
+                                <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                                    alt="" class="h-8 w-auto" />
+                            </a>
+                            <button type="button" command="close" commandfor="mobile-menu"
+                                class="-m-2.5 rounded-md p-2.5 text-gray-400">
+                                <span class="sr-only">Close menu</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    data-slot="icon" aria-hidden="true" class="size-6">
+                                    <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="mt-6 flow-root">
+                            <div class="-my-6 divide-y divide-white/10">
+                                <div class="space-y-2 py-6">
+                                    <div class="-mx-3">
+                                        <button type="button" command="--toggle" commandfor="products"
+                                            class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white/5">
+                                            Product
+                                            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                aria-hidden="true" class="size-5 flex-none in-aria-expanded:rotate-180">
+                                                <path
+                                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                                    clip-rule="evenodd" fill-rule="evenodd" />
+                                            </svg>
+                                        </button>
+                                        <el-disclosure id="products" hidden class="mt-2 block space-y-2">
+                                            <a href="#"
+                                                class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Analytics</a>
+                                            <a href="#"
+                                                class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Engagement</a>
+                                            <a href="#"
+                                                class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Security</a>
+                                            <a href="#"
+                                                class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Integrations</a>
+                                            <a href="#"
+                                                class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Automations</a>
+                                            <a href="#"
+                                                class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Watch
+                                                demo</a>
+                                            <a href="#"
+                                                class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:bg-white/5">Contact
+                                                sales</a>
+                                        </el-disclosure>
+                                    </div>
+                                    <a href="#"
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Features</a>
+                                    <a href="#"
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Marketplace</a>
+                                    <a href="#"
+                                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Company</a>
+                                </div>
+                                <div class="py-6">
+                                    <a href="#"
+                                        class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5">Log
+                                        in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </el-dialog-panel>
+                </div>
+            </dialog>
+        </el-dialog>
+    </header>
+
+
+
+    <!-- <div class=" grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1  place-items-center"> -->
+    <div class="main">
+
+        <div class=" w-[300px] bg-blue-500 rounded  ">
+            <img src="https://mngauto.lv/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-12-at-10.51.20-scaled.jpeg"
+                alt="">
+            <h3>BMW M5</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatem, deserunt labore atque odio
+                reiciendis illum sit incidunt provident maiores cum dolorem blanditiis alias
+            </p>
+        </div>
+
+
+        <div class=" w-[300px] bg-blue-500 rounded ">
+            <img src="https://mngauto.lv/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-12-at-10.51.20-scaled.jpeg"
+                alt="">
+            <h3>BMW M5</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatem, deserunt labore atque odio
+                reiciendis illum sit incidunt provident maiores cum dolorem blanditiis alias
+            </p>
+        </div>
+
+
+        <div class=" w-[300px] bg-blue-500 rounded ">
+            <img src="https://mngauto.lv/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-12-at-10.51.20-scaled.jpeg"
+                alt="">
+            <h3>BMW M5</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatem, deserunt labore atque odio
+                reiciendis illum sit incidunt provident maiores cum dolorem blanditiis alias
+            </p>
+        </div>
+
+
+        <div class=" w-[300px] bg-blue-500 rounded ">
+            <img src="https://mngauto.lv/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-12-at-10.51.20-scaled.jpeg"
+                alt="">
+            <h3>BMW M5</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatem, deserunt labore atque odio
+                reiciendis illum sit incidunt provident maiores cum dolorem blanditiis alias
+            </p>
+        </div>
+
+
+        <div class=" w-[300px] bg-blue-500 rounded ">
+            <img src="https://mngauto.lv/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-12-at-10.51.20-scaled.jpeg"
+                alt="">
+            <h3>BMW M5</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatem, deserunt labore atque odio
+                reiciendis illum sit incidunt provident maiores cum dolorem blanditiis alias
+            </p>
+        </div>
+
+
+        <div class=" w-[300px] bg-blue-500 rounded ">
+            <img src="https://mngauto.lv/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-12-at-10.51.20-scaled.jpeg"
+                alt="">
+            <h3>BMW M5</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatem, deserunt labore atque odio
+                reiciendis illum sit incidunt provident maiores cum dolorem blanditiis alias
+            </p>
+        </div>
+
+
+        <div class=" w-[300px] bg-blue-500 rounded ">
+            <img src="https://mngauto.lv/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-12-at-10.51.20-scaled.jpeg"
+                alt="">
+            <h3>BMW M5</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatem, deserunt labore atque odio
+                reiciendis illum sit incidunt provident maiores cum dolorem blanditiis alias
+            </p>
+        </div>
+
+        <div class=" w-[300px] bg-blue-500 rounded ">
+            <img src="https://mngauto.lv/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-12-at-10.51.20-scaled.jpeg"
+                alt="">
+            <h3>BMW M5</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptatem, deserunt labore atque odio
+                reiciendis illum sit incidunt provident maiores cum dolorem blanditiis alias
+            </p>
+        </div>
+
+    </div>
+
+
+    <section class="py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
+                    Frequently asked questions
+                </h2>
+            </div>
+            <div class="accordion-group" data-accordion="default-accordion">
+                <div class="accordion border border-solid border-gray-300 p-4 rounded-xl transition duration-500 accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4 active"
+                    id="basic-heading-one-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-one-with-icon">
+                        <h5>How can I reset my password?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600 origin-center"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-one-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-one" style="max-height: 250px;">
+                        <p class="text-base text-gray-900 font-normal leading-6">
+                            To create an account, find the 'Sign up' or 'Create account'
+                            button, fill out the registration form with your personal
+                            information, and click 'Create account' or 'Sign up.' Verify
+                            your email address if needed, and then log in to start using the
+                            platform.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion border border-solid border-gray-300 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-two-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-two-with-icon">
+                        <h5>How do I update my billing information?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-two-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-two">
+                        <p class="text-base text-gray-900 font-normal leading-6">
+                            To create an account, find the 'Sign up' or 'Create account'
+                            button, fill out the registration form with your personal
+                            information, and click 'Create account' or 'Sign up.' Verify
+                            your email address if needed, and then log in to start using the
+                            platform.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion border border-solid border-gray-300 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-three-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-three-with-icon">
+                        <h5>How can I contact customer support?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-three-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-three">
+                        <p class="text-base text-gray-900 font-normal leading-6">
+                            To create an account, find the 'Sign up' or 'Create account'
+                            button, fill out the registration form with your personal
+                            information, and click 'Create account' or 'Sign up.' Verify
+                            your email address if needed, and then log in to start using the
+                            platform.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion border border-solid border-gray-300 p-4 rounded-xl accordion-active:bg-indigo-50 accordion-active:border-indigo-600 mb-8 lg:p-4"
+                    id="basic-heading-three-with-icon">
+                    <button
+                        class="accordion-toggle group inline-flex items-center justify-between text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500 hover:text-indigo-600 accordion-active:font-medium accordion-active:text-indigo-600"
+                        aria-controls="basic-collapse-three-with-icon">
+                        <h5>How do I delete my account?</h5>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 block accordion-active:text-indigo-600 accordion-active:hidden group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg class="w-6 h-6 text-gray-900 transition duration-500 hidden accordion-active:text-indigo-600 accordion-active:block group-hover:text-indigo-600"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div id="basic-collapse-three-with-icon" class="accordion-content w-full overflow-hidden pr-4"
+                        aria-labelledby="basic-heading-three">
+                        <p class="text-base text-gray-900 font-normal leading-6">
+                            To create an account, find the 'Sign up' or 'Create account'
+                            button, fill out the registration form with your personal
+                            information, and click 'Create account' or 'Sign up.' Verify
+                            your email address if needed, and then log in to start using the
+                            platform.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <footer class="bg-neutral-primary-soft">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="https://flowbite.com/" class="flex items-center">
+                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-7 me-3" alt="FlowBite Logo" />
+                        <span class="text-heading self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-heading uppercase">Resources</h2>
+                        <ul class="text-body font-medium">
+                            <li class="mb-4">
+                                <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-heading uppercase">Follow us</h2>
+                        <ul class="text-body font-medium">
+                            <li class="mb-4">
+                                <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-heading uppercase">Legal</h2>
+                        <ul class="text-body font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-default sm:mx-auto lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-body sm:text-center">© 2023 <a href="https://flowbite.com/"
+                        class="hover:underline">Flowbite™</a>. All Rights Reserved.
+                </span>
+                <div class="flex mt-4 sm:justify-center sm:mt-0">
+                    <a href="#" class="text-body hover:text-heading">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Facebook page</span>
+                    </a>
+                    <a href="#" class="text-body hover:text-heading ms-5">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.942 5.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.586 11.586 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3 17.392 17.392 0 0 0-2.868 11.662 15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.638 10.638 0 0 1-1.706-.83c.143-.106.283-.217.418-.331a11.664 11.664 0 0 0 10.118 0c.137.114.277.225.418.331-.544.328-1.116.606-1.71.832a12.58 12.58 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM8.678 14.813a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.929 1.929 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                        </svg>
+                        <span class="sr-only">Discord community</span>
+                    </a>
+                    <a href="#" class="text-body hover:text-heading ms-5">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
+                        </svg>
+                        <span class="sr-only">Twitter page</span>
+                    </a>
+                    <a href="#" class="text-body hover:text-heading ms-5">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">GitHub account</span>
+                    </a>
+                    <a href="#" class="text-body hover:text-heading ms-5">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Dribbble account</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

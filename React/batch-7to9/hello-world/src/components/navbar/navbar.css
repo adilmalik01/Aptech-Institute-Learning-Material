@@ -1,0 +1,15 @@
+.navbar {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
