@@ -6,3 +6,4 @@ vendor/
 !.env.example
 dist/
 .next/
+Express.js/7.firebase-connection/serviceAcount.json
